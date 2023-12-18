@@ -52,16 +52,48 @@ h6 {
 }
 
 /* Prelaoder */
-#preloader {
+.page-loader {
+  background-color: #060d22;
+  text-align: center;
   position: fixed;
-  left: 0;
-  top: 0;
   z-index: 999;
+  padding-top:350px;
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: url("https://cdn.svgator.com/./landing-pages/static/css-loader/57579212-0-Loaders-2.svg") no-repeat center center;
 }
+
+.page-loader span {
+  position: absolute;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  font-size: 38px;
+  letter-spacing: 5px;
+}
+
+.page-loader  span:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 0.3px rgb(128, 198, 255);
+}
+
+.page-loader span:nth-child(2) {
+  color: rgb(128, 198, 255);
+  -webkit-text-stroke: 1px rgb(128, 198, 255);
+  animation: uiverse723 3s ease-in-out infinite;
+}
+
+@keyframes uiverse723 {
+  0%, 100% {
+    clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 
+     54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 
+     51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}
+  
 
 
 /*--------------------------------------------------------------
@@ -1147,6 +1179,8 @@ background: radial-gradient(circle, rgba(43,131,232,1) 10%, rgba(6,13,34,1) 100%
 
 .main-event{
   margin-left:120px !important;
+  
+
 }
 
 
@@ -1303,14 +1337,17 @@ background: radial-gradient(circle, rgba(43,131,232,1) 10%, rgba(6,13,34,1) 100%
 
 .card-event:hover + .glasses {
   transform: rotateX(360deg);
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   left: 5.5em;
   top: -18em;
 }
 
 .card-event:hover .heading-event {
-  transform: translateY(7em) translateX(4.50rem);
+  transform: translateY(7em);
+  text-align:center;
+  margin-top:10px;
+  
 }
 
 .card-event:hover .details {

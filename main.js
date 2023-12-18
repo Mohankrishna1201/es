@@ -233,6 +233,11 @@
 
 // loader
 
+
+$(window).on('load', function () {
+  $('#loading').hide();
+})
+
 //prevguest
 
 var swiper = new Swiper(".swiper", {
